@@ -33,40 +33,23 @@ LeLe choix du domaine Agriculture s'explique par plusieurs raisons :
 
 | Classe            | Description                                              |
 |-------------------|----------------------------------------------------------|
-| `Learner`         | Représente un apprenant inscrit dans un programme.       |
-| `Instructor`      | Personne responsable d’un cours ou module.              |
-| `Course`          | Unité d’enseignement regroupant plusieurs modules.      |
-| `Module`          | Partie spécifique d’un cours (ex: Python, Hadoop…).      |
-| `Skill`           | Compétence technique ou théorique à acquérir.           |
-| `Assessment`      | Évaluation liée à une compétence ou un cours.           |
-| `LearningResource`| Ressource pédagogique (vidéo, document, lien, etc.).    |
-| `Project`         | Cas pratique ou projet développé par un apprenant.      |
-| `Technology`      | Outil, framework ou langage utilisé dans les cours.     |
+| `Culture`         | Représente les types de cultures agricoles (tomate etc.) |
+| `Climat`          | Représente les climats favorables pour les plantes.      |
+| `Sol`             | Représente les types de sol selon ses propietés (pH etc.)|
+| `Engrais`         | Représente les types d'engrais utilisés pour les cultures|
+| `Eau`             | Représente les systèmes d'irrigation aux cultures.       |
 
-### 🔸 **Sous-classes proposées**
 
-| Sous-classe        | Super-classe   | Description                                      |
-|--------------------|----------------|--------------------------------------------------|
-| `BigDataModule`    | `Module`       | Modules axés sur les frameworks Big Data (Hadoop, Spark…) |
-| `ProgrammingModule`| `Module`       | Modules de programmation (Python, Scala, etc.)  |
-| `Quiz`             | `Assessment`   | Évaluations rapides de type QCM.                |
-| `Exam`             | `Assessment`   | Épreuves longues et formelles.                  |
-| `PracticalProject` | `Project`      | Projets appliqués à des cas réels ou simulés.   |
 ## 🔗 Relations entre les concepts (propriétés)
 
 Voici les principales relations définies entre les classes de l’ontologie :
 
-| Propriété          | Domaine → Portée            | Description                                                      |
-|--------------------|-----------------------------|------------------------------------------------------------------|
-| `teaches`          | `Instructor → Course`        | L’enseignant donne un cours                                      |
-| `enrolledIn`       | `Learner → Course`           | L’apprenant est inscrit à un cours                               |
-| `includesModule`   | `Course → Module`            | Le cours est composé de plusieurs modules                        |
-| `coversSkill`      | `Module → Skill`             | Le module enseigne une ou plusieurs compétences                  |
-| `assesses`         | `Assessment → Skill`         | L’évaluation mesure une compétence particulière                  |
-| `achievedSkill`    | `Learner → Skill`            | Compétence acquise par l’apprenant                               |
-| `producesProject`  | `Learner → Project`          | L’apprenant réalise un projet                                    |
-| `usesTechnology`   | `Project → Technology`       | Le projet utilise des technologies spécifiques                   |
-| `hasResource`      | `Module → LearningResource`  | Le module est accompagné de ressources pédagogiques              |
+| Propriété          | Domaine → Portée             | Description                                                      |
+|--------------------|----------------------------- |------------------------------------------------------------------|
+| `utiliseSol`       | `Culture → Sol`              | La culture utilise un sol .                                      |
+| `utliseEngrais`    | `Culture → Engrais`          | La culture utilise un engrais .                                  |
+| `consommeEau`      | `Culture → Eau`              | La culture utilise un système d'irrigation .                     |
+| `aClimat`          | `Culture → Climat`           | Le culture a un climat favorable .                               |
 
 ## 🌐 Namespaces utilisés
 
@@ -78,19 +61,20 @@ Afin d'assurer la compatibilité avec les standards du Web sémantique, les name
 | `rdfs:` | `http://www.w3.org/2000/01/rdf-schema#` | Définition de classes et propriétés |
 | `xsd:` | `http://www.w3.org/2001/XMLSchema#` | Types de données (string, int, date...) |
 | `owl:` | `http://www.w3.org/2002/07/owl#` | Modélisation OWL pour classes, restrictions |
-| `foaf:` | `http://xmlns.com/foaf/0.1/` | Pour les personnes (`Learner`, `Instructor`) |
+| `foaf:` | `http://xmlns.com/foaf/0.1/` |
 | `dc:` | `http://purl.org/dc/elements/1.1/` | Métadonnées (titre, créateur, date…) |
 | `skos:` | `http://www.w3.org/2004/02/skos/core#` | Vocabulaire hiérarchique ou thématique (ex: catégories de modules) |
 
 
 ## 🖼️ Visualisation de l’ontologie
-![Visualisation](img/graph.png)
+![Visualisation](./graph.png)
 ## 📊 Requêtes SPARQL exécutées avec résultats
 
 ### 🔁 Préfixes utilisés dans toutes les requêtes :
 ```sparql
-PREFIX : <http://www.education-ontology.org/education-data-engineering#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX agri: <http://www.example.org/agriculture#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 ```
 
 ---
@@ -142,19 +126,20 @@ WHERE {
 
 ---
 
-### ✅ Requête 4 – Apprenants, cours suivis, modules associés
+### ✅ Requête 6 – Lister les cultures triées par rendement décroissant
+
+
+
 ```sparql
-SELECT ?learner ?course ?module
+SELECT ?culture ?rendement
 WHERE {
-  ?learner :enrolledIn ?course .
-  ?course :includesModule ?module .
-  ?learner rdf:type :Learner .
+  ?culture rdf:type agri:Culture ;
+           agri:rendement ?rendement .
 }
+ORDER BY DESC(?rendement)
+
 ```
-| learner   | course                 | module         |
-|-----------|------------------------|----------------|
-| Oussema   | Data Engineering Course | Spark Module   |
-| Oussema   | Data Engineering Course | Python Module  |
+
 
 
 
