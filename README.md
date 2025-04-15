@@ -1,144 +1,157 @@
-# Notre projet d'ontologie
-    
-Bienvenue dans mon projet d'ontologie sémantique dédié au domaine de **l'agriculture**.
+# 🌱 Ontologie Agricole Sémantique
 
-# 🌱 Ontologie pour l'Agriculture
+Bienvenue dans mon projet d'ontologie sémantique dédiée au domaine de **l'agriculture intelligente**.
 
-## 🎯 Domaine choisi
+## 🎯 Domaine et Objectifs
 
-Ce projet consiste à modéliser un domaine lié à l'agriculture en utilisant des technologies sémantiques (RDF, RDFS, OWL, SPARQL, SWRL). L'objectif est de créer une ontologie permettant de gérer des concepts comme les **cultures**, **sols**, **engrais**, **climats**, **irrigation**, et d'autres éléments essentiels à la gestion agricole.
+Cette ontologie modélise les connaissances du domaine **agricole** en utilisant les technologies du Web Sémantique (RDF, RDFS, OWL). Elle permet de :
 
-## ✅ Justification du choix
+- Structurer les connaissances sur les cultures, sols, climats et pratiques agricoles
+- Faciliter l'échange de données entre systèmes agricoles
+- Soutenir la prise de décision pour une agriculture durable
 
-LeLe choix du domaine Agriculture s'explique par plusieurs raisons :
+## ✅ Justification du Choix
 
-🌱 Pertinence sociétale : L’agriculture est un pilier fondamental pour la sécurité alimentaire, la durabilité environnementale et le développement économique, ce qui en fait un domaine d’étude stratégique et d’intérêt public.
+### 🌍 Pertinence Sociétale 
+L'agriculture est cruciale pour :
+- La sécurité alimentaire mondiale
+- La durabilité environnementale
+- Le développement économique rural
 
-🌾 Richesse conceptuelle : Ce domaine englobe une grande variété d'entités interconnectées telles que les cultures, les sols, les pratiques agricoles, les fertilisants, les conditions climatiques, les maladies des plantes, etc. Cela en fait un excellent candidat pour la modélisation sémantique.
+### 🧠 Richesse Conceptuelle
+Le domaine couvre :
+- 12+ types de cultures
+- 6+ types de sols
+- 5+ systèmes d'irrigation
+- 10+ paramètres agronomiques
 
-🧠 Utilité pratique : Une ontologie agricole permettrait de :
+### 💡 Utilité Pratique
+Applications possibles :
+- Recommandation de cultures adaptées
+- Optimisation des ressources (eau, engrais)
+- Détection précoce de risques
+- Gestion intelligente des exploitations
 
-+ recommander des cultures adaptées en fonction des propriétés du sol, du climat et des nutriments (NPK),
+## 🧠 Concepts Clés (Classes Principales)
 
-+ structurer des bonnes pratiques agricoles en fonction des cultures ou des saisons,
-
-+ suivre l’évolution de la santé des plantes ou détecter des risques environnementaux (maladies, sécheresse, etc.),
-
-+ optimiser l’utilisation des ressources comme l’eau et les engrais via des systèmes intelligents de conseil.
-
-
-## 🧠 Concepts clés identifiés
-
-### 🔷 **Classes principales**
-
-| Classe            | Description                                              |
-|-------------------|----------------------------------------------------------|
-| `Culture`         | Représente les types de cultures agricoles (tomate etc.) |
-| `Climat`          | Représente les climats favorables pour les plantes.      |
-| `Sol`             | Représente les types de sol selon ses propietés (pH etc.)|
-| `Engrais`         | Représente les types d'engrais utilisés pour les cultures|
-| `Eau`             | Représente les systèmes d'irrigation aux cultures.       |
-
-
-## 🔗 Relations entre les concepts (propriétés)
-
-Voici les principales relations définies entre les classes de l’ontologie :
-
-| Propriété          | Domaine → Portée             | Description                                                      |
-|--------------------|----------------------------- |------------------------------------------------------------------|
-| `utiliseSol`       | `Culture → Sol`              | La culture utilise un sol .                                      |
-| `utliseEngrais`    | `Culture → Engrais`          | La culture utilise un engrais .                                  |
-| `consommeEau`      | `Culture → Eau`              | La culture utilise un système d'irrigation .                     |
-| `aClimat`          | `Culture → Climat`           | Le culture a un climat favorable .                               |
-
-## 🌐 Namespaces utilisés
-
-Afin d'assurer la compatibilité avec les standards du Web sémantique, les namespaces suivants seront utilisés dans notre ontologie :
-
-| Préfixe | URI | Utilisation prévue |
-|--------|-----|--------------------|
-| `rdf:` | `http://www.w3.org/1999/02/22-rdf-syntax-ns#` | Syntaxe RDF de base |
-| `rdfs:` | `http://www.w3.org/2000/01/rdf-schema#` | Définition de classes et propriétés |
-| `xsd:` | `http://www.w3.org/2001/XMLSchema#` | Types de données (string, int, date...) |
-| `owl:` | `http://www.w3.org/2002/07/owl#` | Modélisation OWL pour classes, restrictions |
-| `foaf:` | `http://xmlns.com/foaf/0.1/` |
-| `dc:` | `http://purl.org/dc/elements/1.1/` | Métadonnées (titre, créateur, date…) |
-| `skos:` | `http://www.w3.org/2004/02/skos/core#` | Vocabulaire hiérarchique ou thématique (ex: catégories de modules) |
-
+| Classe                | Description                                  | Exemples                          |
+|-----------------------|----------------------------------------------|-----------------------------------|
+| `Culture`             | Plantes cultivées                            | Tomate, Blé, Maïs                 |
+| `Sol`                 | Types de sols agricoles                      | Argileux, Sableux, Calcaire       |
+| `Climat`              | Conditions climatiques                       | Tempéré, Tropical, Méditerranéen  |
+| `Engrais`             | Fertilisants                                 | Azote, Phosphore, Potassium       |
+| `Pesticide`           | Produits phytosanitaires                     | Bio, Chimique                     |
+| `Agriculteur`         | Exploitants agricoles                        | Jean Dupont, Marie Lambert        |
+| `MethodeIrrigation`   | Techniques d'arrosage                        | Goutte-à-goutte, Aspersion        |
+| `ZoneGeographique`    | Localisations                                | Vallée de la Loire, Provence      |
+| `Saison`              | Périodes de culture                          | Printemps, Été                    |
+| `Equipement`          | Matériel agricole                            | Tracteur, Serre                   |
 
 ## 🖼️ Visualisation de l’ontologie
-![Visualisation](./graph.png)
-## 📊 Requêtes SPARQL exécutées avec résultats
+![Visualisation](./Screenshots/graph.png)
 
-### 🔁 Préfixes utilisés dans toutes les requêtes :
-```sparql
-PREFIX agri: <http://www.example.org/agriculture#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+## 🔗 Relations (Propriétés)
+
+### Propriétés d'Objet
+
+| Relation              | Domaine → Portée           | Description                     |
+|-----------------------|----------------------------|---------------------------------|
+| `utiliseSol`          | Culture → Sol              | Sol requis par la culture       |
+| `utiliseEngrais`      | Culture → Engrais          | Engrais recommandé              |
+| `consommeEau`         | Culture → Eau              | Besoins en irrigation           |
+| `aClimat`             | Culture → Climat           | Climat optimal                  |
+| `utilisePesticide`    | Culture → Pesticide        | Traitements phytosanitaires     |
+| `cultivePar`          | Culture → Agriculteur      | Responsable de la culture       |
+| `methodeIrrigation`   | Culture → MethodeIrrigation| Technique d'arrosage utilisée   |
+
+### Propriétés de Données
+
+| Propriété            | Domaine    | Type       | Description                     |
+|----------------------|------------|------------|---------------------------------|
+| `datePlantation`     | Culture    | date       | Date de semis/plantation        |
+| `quantiteEau`        | Culture    | decimal    | Besoin en eau (L)               |
+| `rendement`          | Culture    | decimal    | Rendement (kg/m²)               |
+| `superficie`         | Culture    | decimal    | Surface cultivée (ha)           |
+| `dureeCroissance`    | Culture    | integer    | Durée croissance (jours)        |
+| `prixMarche`         | Culture    | decimal    | Prix moyen (€/kg)               |
+
+
+## 🌐 Namespaces Utilisés
+
+| Préfixe | URI                                      | Utilisation                     |
+|---------|------------------------------------------|---------------------------------|
+| `agri:` | `http://www.example.org/agriculture#`    | Concepts agricoles              |
+| `rdf:`  | `http://www.w3.org/1999/02/22-rdf-syntax-ns#` | Syntaxe RDF de base       |
+| `rdfs:` | `http://www.w3.org/2000/01/rdf-schema#`  | Schéma RDFS                    |
+| `owl:`  | `http://www.w3.org/2002/07/owl#`         | Modélisation OWL               |
+| `xsd:`  | `http://www.w3.org/2001/XMLSchema#`      | Types de données               |
+
+## 📊 Requêtes SPARQL Exemples
+
+### 1. Lister toutes les cultures avec leurs méthodes d'irrigation (requete 1)
+Utilité : Cette requête est utile pour :
+- Comprendre quelles méthodes d'irrigation sont utilisées pour chaque culture
+- Identifier les pratiques d'arrosage dominantes
+- Préparer une analyse comparative des techniques d'irrigation
+
+### 2. Cultures utilisant des pesticides biologiques (requete 2)
+Utilité : Cette requête permet de :
+- Identifier les cultures cultivées en agriculture biologique
+- Évaluer la proportion de cultures utilisant des pesticides biologiques
+- Cibler les produits pour un marché bio
+
+### 3. Consommation d'eau par culture: tri décroissant (requete 3)
+Utilité : Cette requête sert à :
+- Identifier les cultures les plus gourmandes en eau
+- Optimiser la gestion des ressources hydriques
+- Prioriser les cultures pour des systèmes d'irrigation efficaces
+
+### 4. Cultures cultivées par Jean Dupont (requete 4)
+Utilité : Cette requête permet de :
+- Connaître le portfolio de cultures d'un agriculteur spécifique
+- Analyser les choix culturaux d'un exploitant
+- Préparer un bilan d'activité pour un agriculteur donné
+
+### 5. Cultures adaptées au climat méditerranéen (requete 5)
+Utilité : Cette requête est utile pour :
+- Identifier les cultures appropriées pour une zone climatique spécifique
+- Planifier des rotations culturales adaptées au climat
+- Conseiller les agriculteurs sur les cultures les mieux adaptées
+
+### 6. Statistiques de production par agriculteur (requete 6)
+Utilité : Cette requête permet de :
+- Calculer le nombre total de cultures par agriculteur
+- Déterminer le rendement moyen des cultures pour chaque exploitant
+- Comparer les performances entre agriculteurs
+
+## 🗂 Structure du Dépôt
+```plaintext
+Ontologie/
+├── agriculture.owx        # Fichier OWL/XML complet de l'ontologie
+├── agriculture.rdf        # Export RDF/XML de la modélisation en RDF et RDFS
+├── agriculture.ttl        # Fichier Turtle representant les tripletes
+├── regles_swrl.swrl       # Fichier contenant les règles SWRL
+Requetes/
+├── requete1.sparql
+├── requete2.sparql
+├── requete3.sparql
+├── requete4.sparql
+├── requete5.sparql
+├── requete6.sparql
+Screenshots/
+├── requete1.png
+├── requete2.png
+├── requete3.png
+├── requete4.png
+├── requete5.png
+├── requete6.png
+README.md            # Documentation et présentation du projet
 ```
+## 👨‍💻 Auteur
+Ce projet d'ontologie sémantique a été développé par :
 
----
-
-
-### ✅ Requête 1 – Apprenants, leurs projets et les technologies utilisées
-```sparql
-SELECT ?learner ?project ?technology
-WHERE {
-  ?learner rdf:type :Learner .
-  ?learner :producesProject ?project .
-  ?project :usesTechnology ?technology .
-}
-```
-| learner  | project               | technology |
-|----------|-----------------------|------------|
-| Oussema  | Data Analysis Project | Python     |
-
----
-
-### ✅ Requête 2 – Modules, compétences couvertes et ressources pédagogiques
-```sparql
-SELECT ?module ?skill ?resource
-WHERE {
-  ?module :coversSkill ?skill .
-  ?module :hasResource ?resource .
-  ?module rdf:type :ProgrammingModule .
-}
-```
-| module         | skill         | resource             |
-|----------------|---------------|----------------------|
-| Python Module  | Python Basics | Intro to Python PDF  |
-
----
-
-### ✅ Requête 3 – Enseignants, cours enseignés, modules inclus
-```sparql
-SELECT ?instructor ?course ?module
-WHERE {
-  ?instructor :teaches ?course .
-  ?course :includesModule ?module .
-  ?instructor rdf:type :Instructor .
-}
-```
-| instructor   | course                 | module         |
-|--------------|------------------------|----------------|
-| MrBenSalah   | Data Engineering Course | Spark Module   |
-| MrBenSalah   | Data Engineering Course | Python Module  |
-
----
-
-### ✅ Requête 6 – Lister les cultures triées par rendement décroissant
-
-
-
-```sparql
-SELECT ?culture ?rendement
-WHERE {
-  ?culture rdf:type agri:Culture ;
-           agri:rendement ?rendement .
-}
-ORDER BY DESC(?rendement)
-
-```
+**Ahmed Bensalah**
+Étudiant en 1ère année Ingénieurie des Données
 
 
 

@@ -1,0 +1,11 @@
+PREFIX agri: <http://www.example.org/agriculture#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nomCulture ?typeSol
+WHERE {
+  ?culture a agri:Culture ;
+           rdfs:label ?nomCulture ;
+           agri:aClimat agri:ClimatMediterraneen ;
+           agri:utiliseSol ?sol .
+  ?sol rdfs:label ?typeSol .
+}

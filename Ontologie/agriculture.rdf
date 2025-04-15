@@ -1,0 +1,569 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:agri="http://www.example.org/agriculture#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/agriculture#aClimat -->
+
+    <ObjectProperty rdf:about="http://www.example.org/agriculture#aClimat">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.example.org/agriculture#Climat"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/agriculture#consommeEau -->
+
+    <ObjectProperty rdf:about="http://www.example.org/agriculture#consommeEau">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.example.org/agriculture#Eau"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/agriculture#cultivePar -->
+
+    <ObjectProperty rdf:about="http://www.example.org/agriculture#cultivePar">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.example.org/agriculture#Agriculteur"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/agriculture#utiliseEngrais -->
+
+    <ObjectProperty rdf:about="http://www.example.org/agriculture#utiliseEngrais">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.example.org/agriculture#Engrais"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/agriculture#utiliseMethode -->
+
+    <ObjectProperty rdf:about="http://www.example.org/agriculture#utiliseMethode">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.example.org/agriculture#MethodeIrrigation"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/agriculture#utilisePesticide -->
+
+    <ObjectProperty rdf:about="http://www.example.org/agriculture#utilisePesticide">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.example.org/agriculture#Pesticide"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/agriculture#utiliseSol -->
+
+    <ObjectProperty rdf:about="http://www.example.org/agriculture#utiliseSol">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.example.org/agriculture#Sol"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/agriculture#datePlantation -->
+
+    <DatatypeProperty rdf:about="http://www.example.org/agriculture#datePlantation">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/agriculture#quantiteEau -->
+
+    <DatatypeProperty rdf:about="http://www.example.org/agriculture#quantiteEau">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/agriculture#rendement -->
+
+    <DatatypeProperty rdf:about="http://www.example.org/agriculture#rendement">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/agriculture#superficie -->
+
+    <DatatypeProperty rdf:about="http://www.example.org/agriculture#superficie">
+        <rdfs:domain rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/agriculture#Agriculteur -->
+
+    <Class rdf:about="http://www.example.org/agriculture#Agriculteur"/>
+    
+
+
+    <!-- http://www.example.org/agriculture#Climat -->
+
+    <Class rdf:about="http://www.example.org/agriculture#Climat"/>
+    
+
+
+    <!-- http://www.example.org/agriculture#Culture -->
+
+    <Class rdf:about="http://www.example.org/agriculture#Culture"/>
+    
+
+
+    <!-- http://www.example.org/agriculture#Eau -->
+
+    <Class rdf:about="http://www.example.org/agriculture#Eau"/>
+    
+
+
+    <!-- http://www.example.org/agriculture#Engrais -->
+
+    <Class rdf:about="http://www.example.org/agriculture#Engrais"/>
+    
+
+
+    <!-- http://www.example.org/agriculture#MethodeIrrigation -->
+
+    <Class rdf:about="http://www.example.org/agriculture#MethodeIrrigation"/>
+    
+
+
+    <!-- http://www.example.org/agriculture#Pesticide -->
+
+    <Class rdf:about="http://www.example.org/agriculture#Pesticide"/>
+    
+
+
+    <!-- http://www.example.org/agriculture#Sol -->
+
+    <Class rdf:about="http://www.example.org/agriculture#Sol"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/agriculture#AgriculteurJean -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#AgriculteurJean">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Agriculteur"/>
+        <rdfs:label>Jean Dupont</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#AgriculteurMarie -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#AgriculteurMarie">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Agriculteur"/>
+        <rdfs:label>Marie Lambert</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Aspersion -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Aspersion">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#MethodeIrrigation"/>
+        <rdfs:label>Irrigation par Aspersion</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Aubergine -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Aubergine">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatMediterraneen"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurJean"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisPhosphore"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#GoutteAGoutte"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideBio"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolArgileux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-03-25</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.0</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</agri:superficie>
+        <rdfs:label>Aubergine</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Blé -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Blé">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatTempere"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurJean"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisPhosphore"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#Aspersion"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideBio"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolSableux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-15</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</agri:superficie>
+        <rdfs:label>Blé</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Carotte -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Carotte">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatTempere"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurMarie"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisPhosphore"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#GoutteAGoutte"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideBio"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolSableux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-03-20</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.7</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.8</agri:superficie>
+        <rdfs:label>Carotte</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Chou -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Chou">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatTempere"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurJean"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisPhosphore"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#Gravite"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideChimique"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolArgileux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-15</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.0</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5</agri:superficie>
+        <rdfs:label>Chou</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#ClimatMediterraneen -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#ClimatMediterraneen">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Climat"/>
+        <rdfs:label>Climat Méditerranéen</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#ClimatTempere -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#ClimatTempere">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Climat"/>
+        <rdfs:label>Climat Tempéré</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Courgette -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Courgette">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatMediterraneen"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurMarie"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisAzote"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#GoutteAGoutte"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideBio"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolArgileux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-20</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</agri:superficie>
+        <rdfs:label>Courgette</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#EngraisAzote -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#EngraisAzote">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Engrais"/>
+        <rdfs:label>Engrais Azoté</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#EngraisPhosphore -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#EngraisPhosphore">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Engrais"/>
+        <rdfs:label>Engrais Phosphaté</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Epinard -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Epinard">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatTempere"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurMarie"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisAzote"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#GoutteAGoutte"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideBio"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolArgileux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-10</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.0</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</agri:superficie>
+        <rdfs:label>Épinard</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Fraise -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Fraise">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatTempere"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurMarie"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisAzote"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#GoutteAGoutte"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideBio"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolSableux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-04-05</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">130</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</agri:superficie>
+        <rdfs:label>Fraise</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#GoutteAGoutte -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#GoutteAGoutte">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#MethodeIrrigation"/>
+        <rdfs:label>Irrigation Goutte-à-goutte</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Gravite -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Gravite">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#MethodeIrrigation"/>
+        <rdfs:label>Irrigation par Gravité</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Haricot -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Haricot">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatTempere"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurJean"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisPhosphore"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#Gravite"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideBio"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolSableux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-07-05</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.2</agri:superficie>
+        <rdfs:label>Haricot</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Mais -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Mais">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatTempere"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurMarie"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisAzote"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#Aspersion"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideChimique"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolArgileux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-01</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.0</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</agri:superficie>
+        <rdfs:label>Maïs</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#PesticideBio -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#PesticideBio">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Pesticide"/>
+        <rdfs:label>Pesticide Biologique</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#PesticideChimique -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#PesticideChimique">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Pesticide"/>
+        <rdfs:label>Pesticide Chimique</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Poivron -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Poivron">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatMediterraneen"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurMarie"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisAzote"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#GoutteAGoutte"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideBio"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolSableux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-06-10</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">140</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.0</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.8</agri:superficie>
+        <rdfs:label>Poivron</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#PommeDeTerre -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#PommeDeTerre">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatTempere"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurJean"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisAzote"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#Gravite"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideChimique"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolArgileux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-02-10</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35.5</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</agri:superficie>
+        <rdfs:label>Pomme de Terre</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#SolArgileux -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#SolArgileux">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Sol"/>
+        <rdfs:label>Sol Argileux</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#SolSableux -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#SolSableux">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Sol"/>
+        <rdfs:label>Sol Sableux</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/agriculture#Tomate -->
+
+    <NamedIndividual rdf:about="http://www.example.org/agriculture#Tomate">
+        <rdf:type rdf:resource="http://www.example.org/agriculture#Culture"/>
+        <agri:aClimat rdf:resource="http://www.example.org/agriculture#ClimatTempere"/>
+        <agri:cultivePar rdf:resource="http://www.example.org/agriculture#AgriculteurJean"/>
+        <agri:utiliseEngrais rdf:resource="http://www.example.org/agriculture#EngraisAzote"/>
+        <agri:utiliseMethode rdf:resource="http://www.example.org/agriculture#GoutteAGoutte"/>
+        <agri:utilisePesticide rdf:resource="http://www.example.org/agriculture#PesticideBio"/>
+        <agri:utiliseSol rdf:resource="http://www.example.org/agriculture#SolArgileux"/>
+        <agri:datePlantation rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-04-15</agri:datePlantation>
+        <agri:quantiteEau rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150</agri:quantiteEau>
+        <agri:rendement rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.5</agri:rendement>
+        <agri:superficie rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5</agri:superficie>
+        <rdfs:label>Tomate</rdfs:label>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

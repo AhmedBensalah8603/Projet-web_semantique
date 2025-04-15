@@ -1,0 +1,404 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix agri: <http://www.example.org/agriculture#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.org/agriculture#aClimat
+agri:aClimat rdf:type owl:ObjectProperty ;
+             rdfs:domain agri:Culture ;
+             rdfs:range agri:Climat .
+
+
+###  http://www.example.org/agriculture#consommeEau
+agri:consommeEau rdf:type owl:ObjectProperty ;
+                 rdfs:domain agri:Culture ;
+                 rdfs:range agri:Eau .
+
+
+###  http://www.example.org/agriculture#cultivePar
+agri:cultivePar rdf:type owl:ObjectProperty ;
+                rdfs:domain agri:Culture ;
+                rdfs:range agri:Agriculteur .
+
+
+###  http://www.example.org/agriculture#utiliseEngrais
+agri:utiliseEngrais rdf:type owl:ObjectProperty ;
+                    rdfs:domain agri:Culture ;
+                    rdfs:range agri:Engrais .
+
+
+###  http://www.example.org/agriculture#utiliseMethode
+agri:utiliseMethode rdf:type owl:ObjectProperty ;
+                    rdfs:domain agri:Culture ;
+                    rdfs:range agri:MethodeIrrigation .
+
+
+###  http://www.example.org/agriculture#utilisePesticide
+agri:utilisePesticide rdf:type owl:ObjectProperty ;
+                      rdfs:domain agri:Culture ;
+                      rdfs:range agri:Pesticide .
+
+
+###  http://www.example.org/agriculture#utiliseSol
+agri:utiliseSol rdf:type owl:ObjectProperty ;
+                rdfs:domain agri:Culture ;
+                rdfs:range agri:Sol .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.example.org/agriculture#datePlantation
+agri:datePlantation rdf:type owl:DatatypeProperty ;
+                    rdfs:domain agri:Culture ;
+                    rdfs:range xsd:date .
+
+
+###  http://www.example.org/agriculture#quantiteEau
+agri:quantiteEau rdf:type owl:DatatypeProperty ;
+                 rdfs:domain agri:Culture ;
+                 rdfs:range xsd:decimal .
+
+
+###  http://www.example.org/agriculture#rendement
+agri:rendement rdf:type owl:DatatypeProperty ;
+               rdfs:domain agri:Culture ;
+               rdfs:range xsd:decimal .
+
+
+###  http://www.example.org/agriculture#superficie
+agri:superficie rdf:type owl:DatatypeProperty ;
+                rdfs:domain agri:Culture ;
+                rdfs:range xsd:decimal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/agriculture#Agriculteur
+agri:Agriculteur rdf:type owl:Class .
+
+
+###  http://www.example.org/agriculture#Climat
+agri:Climat rdf:type owl:Class .
+
+
+###  http://www.example.org/agriculture#Culture
+agri:Culture rdf:type owl:Class .
+
+
+###  http://www.example.org/agriculture#Eau
+agri:Eau rdf:type owl:Class .
+
+
+###  http://www.example.org/agriculture#Engrais
+agri:Engrais rdf:type owl:Class .
+
+
+###  http://www.example.org/agriculture#MethodeIrrigation
+agri:MethodeIrrigation rdf:type owl:Class .
+
+
+###  http://www.example.org/agriculture#Pesticide
+agri:Pesticide rdf:type owl:Class .
+
+
+###  http://www.example.org/agriculture#Sol
+agri:Sol rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.example.org/agriculture#AgriculteurJean
+agri:AgriculteurJean rdf:type owl:NamedIndividual ,
+                              agri:Agriculteur ;
+                     rdfs:label "Jean Dupont" .
+
+
+###  http://www.example.org/agriculture#AgriculteurMarie
+agri:AgriculteurMarie rdf:type owl:NamedIndividual ,
+                               agri:Agriculteur ;
+                      rdfs:label "Marie Lambert" .
+
+
+###  http://www.example.org/agriculture#Aspersion
+agri:Aspersion rdf:type owl:NamedIndividual ,
+                        agri:MethodeIrrigation ;
+               rdfs:label "Irrigation par Aspersion" .
+
+
+###  http://www.example.org/agriculture#Aubergine
+agri:Aubergine rdf:type owl:NamedIndividual ,
+                        agri:Culture ;
+               agri:aClimat agri:ClimatMediterraneen ;
+               agri:cultivePar agri:AgriculteurJean ;
+               agri:utiliseEngrais agri:EngraisPhosphore ;
+               agri:utiliseMethode agri:GoutteAGoutte ;
+               agri:utilisePesticide agri:PesticideBio ;
+               agri:utiliseSol agri:SolArgileux ;
+               agri:datePlantation "2023-03-25"^^xsd:date ;
+               agri:quantiteEau 160 ;
+               agri:rendement 28.0 ;
+               agri:superficie 2.0 ;
+               rdfs:label "Aubergine" .
+
+
+###  http://www.example.org/agriculture#Blé
+agri:Blé rdf:type owl:NamedIndividual ,
+                  agri:Culture ;
+         agri:aClimat agri:ClimatTempere ;
+         agri:cultivePar agri:AgriculteurJean ;
+         agri:utiliseEngrais agri:EngraisPhosphore ;
+         agri:utiliseMethode agri:Aspersion ;
+         agri:utilisePesticide agri:PesticideBio ;
+         agri:utiliseSol agri:SolSableux ;
+         agri:datePlantation "2023-10-15"^^xsd:date ;
+         agri:quantiteEau 80 ;
+         agri:rendement 7.5 ;
+         agri:superficie 10.0 ;
+         rdfs:label "Blé" .
+
+
+###  http://www.example.org/agriculture#Carotte
+agri:Carotte rdf:type owl:NamedIndividual ,
+                      agri:Culture ;
+             agri:aClimat agri:ClimatTempere ;
+             agri:cultivePar agri:AgriculteurMarie ;
+             agri:utiliseEngrais agri:EngraisPhosphore ;
+             agri:utiliseMethode agri:GoutteAGoutte ;
+             agri:utilisePesticide agri:PesticideBio ;
+             agri:utiliseSol agri:SolSableux ;
+             agri:datePlantation "2023-03-20"^^xsd:date ;
+             agri:quantiteEau 100 ;
+             agri:rendement 8.7 ;
+             agri:superficie 1.8 ;
+             rdfs:label "Carotte" .
+
+
+###  http://www.example.org/agriculture#Chou
+agri:Chou rdf:type owl:NamedIndividual ,
+                   agri:Culture ;
+          agri:aClimat agri:ClimatTempere ;
+          agri:cultivePar agri:AgriculteurJean ;
+          agri:utiliseEngrais agri:EngraisPhosphore ;
+          agri:utiliseMethode agri:Gravite ;
+          agri:utilisePesticide agri:PesticideChimique ;
+          agri:utiliseSol agri:SolArgileux ;
+          agri:datePlantation "2023-08-15"^^xsd:date ;
+          agri:quantiteEau 180 ;
+          agri:rendement 18.0 ;
+          agri:superficie 2.5 ;
+          rdfs:label "Chou" .
+
+
+###  http://www.example.org/agriculture#ClimatMediterraneen
+agri:ClimatMediterraneen rdf:type owl:NamedIndividual ,
+                                  agri:Climat ;
+                         rdfs:label "Climat Méditerranéen" .
+
+
+###  http://www.example.org/agriculture#ClimatTempere
+agri:ClimatTempere rdf:type owl:NamedIndividual ,
+                            agri:Climat ;
+                   rdfs:label "Climat Tempéré" .
+
+
+###  http://www.example.org/agriculture#Courgette
+agri:Courgette rdf:type owl:NamedIndividual ,
+                        agri:Culture ;
+               agri:aClimat agri:ClimatMediterraneen ;
+               agri:cultivePar agri:AgriculteurMarie ;
+               agri:utiliseEngrais agri:EngraisAzote ;
+               agri:utiliseMethode agri:GoutteAGoutte ;
+               agri:utilisePesticide agri:PesticideBio ;
+               agri:utiliseSol agri:SolArgileux ;
+               agri:datePlantation "2023-05-20"^^xsd:date ;
+               agri:quantiteEau 120 ;
+               agri:rendement 12.0 ;
+               agri:superficie 1.5 ;
+               rdfs:label "Courgette" .
+
+
+###  http://www.example.org/agriculture#EngraisAzote
+agri:EngraisAzote rdf:type owl:NamedIndividual ,
+                           agri:Engrais ;
+                  rdfs:label "Engrais Azoté" .
+
+
+###  http://www.example.org/agriculture#EngraisPhosphore
+agri:EngraisPhosphore rdf:type owl:NamedIndividual ,
+                               agri:Engrais ;
+                      rdfs:label "Engrais Phosphaté" .
+
+
+###  http://www.example.org/agriculture#Epinard
+agri:Epinard rdf:type owl:NamedIndividual ,
+                      agri:Culture ;
+             agri:aClimat agri:ClimatTempere ;
+             agri:cultivePar agri:AgriculteurMarie ;
+             agri:utiliseEngrais agri:EngraisAzote ;
+             agri:utiliseMethode agri:GoutteAGoutte ;
+             agri:utilisePesticide agri:PesticideBio ;
+             agri:utiliseSol agri:SolArgileux ;
+             agri:datePlantation "2023-09-10"^^xsd:date ;
+             agri:quantiteEau 110 ;
+             agri:rendement 14.0 ;
+             agri:superficie 1.2 ;
+             rdfs:label "Épinard" .
+
+
+###  http://www.example.org/agriculture#Fraise
+agri:Fraise rdf:type owl:NamedIndividual ,
+                     agri:Culture ;
+            agri:aClimat agri:ClimatTempere ;
+            agri:cultivePar agri:AgriculteurMarie ;
+            agri:utiliseEngrais agri:EngraisAzote ;
+            agri:utiliseMethode agri:GoutteAGoutte ;
+            agri:utilisePesticide agri:PesticideBio ;
+            agri:utiliseSol agri:SolSableux ;
+            agri:datePlantation "2023-04-05"^^xsd:date ;
+            agri:quantiteEau 130 ;
+            agri:rendement 6.5 ;
+            agri:superficie 0.8 ;
+            rdfs:label "Fraise" .
+
+
+###  http://www.example.org/agriculture#GoutteAGoutte
+agri:GoutteAGoutte rdf:type owl:NamedIndividual ,
+                            agri:MethodeIrrigation ;
+                   rdfs:label "Irrigation Goutte-à-goutte" .
+
+
+###  http://www.example.org/agriculture#Gravite
+agri:Gravite rdf:type owl:NamedIndividual ,
+                      agri:MethodeIrrigation ;
+             rdfs:label "Irrigation par Gravité" .
+
+
+###  http://www.example.org/agriculture#Haricot
+agri:Haricot rdf:type owl:NamedIndividual ,
+                      agri:Culture ;
+             agri:aClimat agri:ClimatTempere ;
+             agri:cultivePar agri:AgriculteurJean ;
+             agri:utiliseEngrais agri:EngraisPhosphore ;
+             agri:utiliseMethode agri:Gravite ;
+             agri:utilisePesticide agri:PesticideBio ;
+             agri:utiliseSol agri:SolSableux ;
+             agri:datePlantation "2023-07-05"^^xsd:date ;
+             agri:quantiteEau 90 ;
+             agri:rendement 9.5 ;
+             agri:superficie 2.2 ;
+             rdfs:label "Haricot" .
+
+
+###  http://www.example.org/agriculture#Mais
+agri:Mais rdf:type owl:NamedIndividual ,
+                   agri:Culture ;
+          agri:aClimat agri:ClimatTempere ;
+          agri:cultivePar agri:AgriculteurMarie ;
+          agri:utiliseEngrais agri:EngraisAzote ;
+          agri:utiliseMethode agri:Aspersion ;
+          agri:utilisePesticide agri:PesticideChimique ;
+          agri:utiliseSol agri:SolArgileux ;
+          agri:datePlantation "2023-05-01"^^xsd:date ;
+          agri:quantiteEau 250 ;
+          agri:rendement 15.0 ;
+          agri:superficie 5.0 ;
+          rdfs:label "Maïs" .
+
+
+###  http://www.example.org/agriculture#PesticideBio
+agri:PesticideBio rdf:type owl:NamedIndividual ,
+                           agri:Pesticide ;
+                  rdfs:label "Pesticide Biologique" .
+
+
+###  http://www.example.org/agriculture#PesticideChimique
+agri:PesticideChimique rdf:type owl:NamedIndividual ,
+                                agri:Pesticide ;
+                       rdfs:label "Pesticide Chimique" .
+
+
+###  http://www.example.org/agriculture#Poivron
+agri:Poivron rdf:type owl:NamedIndividual ,
+                      agri:Culture ;
+             agri:aClimat agri:ClimatMediterraneen ;
+             agri:cultivePar agri:AgriculteurMarie ;
+             agri:utiliseEngrais agri:EngraisAzote ;
+             agri:utiliseMethode agri:GoutteAGoutte ;
+             agri:utilisePesticide agri:PesticideBio ;
+             agri:utiliseSol agri:SolSableux ;
+             agri:datePlantation "2023-06-10"^^xsd:date ;
+             agri:quantiteEau 140 ;
+             agri:rendement 26.0 ;
+             agri:superficie 1.8 ;
+             rdfs:label "Poivron" .
+
+
+###  http://www.example.org/agriculture#PommeDeTerre
+agri:PommeDeTerre rdf:type owl:NamedIndividual ,
+                           agri:Culture ;
+                  agri:aClimat agri:ClimatTempere ;
+                  agri:cultivePar agri:AgriculteurJean ;
+                  agri:utiliseEngrais agri:EngraisAzote ;
+                  agri:utiliseMethode agri:Gravite ;
+                  agri:utilisePesticide agri:PesticideChimique ;
+                  agri:utiliseSol agri:SolArgileux ;
+                  agri:datePlantation "2023-02-10"^^xsd:date ;
+                  agri:quantiteEau 200 ;
+                  agri:rendement 35.5 ;
+                  agri:superficie 3.0 ;
+                  rdfs:label "Pomme de Terre" .
+
+
+###  http://www.example.org/agriculture#SolArgileux
+agri:SolArgileux rdf:type owl:NamedIndividual ,
+                          agri:Sol ;
+                 rdfs:label "Sol Argileux" .
+
+
+###  http://www.example.org/agriculture#SolSableux
+agri:SolSableux rdf:type owl:NamedIndividual ,
+                         agri:Sol ;
+                rdfs:label "Sol Sableux" .
+
+
+###  http://www.example.org/agriculture#Tomate
+agri:Tomate rdf:type owl:NamedIndividual ,
+                     agri:Culture ;
+            agri:aClimat agri:ClimatTempere ;
+            agri:cultivePar agri:AgriculteurJean ;
+            agri:utiliseEngrais agri:EngraisAzote ;
+            agri:utiliseMethode agri:GoutteAGoutte ;
+            agri:utilisePesticide agri:PesticideBio ;
+            agri:utiliseSol agri:SolArgileux ;
+            agri:datePlantation "2023-04-15"^^xsd:date ;
+            agri:quantiteEau 150 ;
+            agri:rendement 10.5 ;
+            agri:superficie 2.5 ;
+            rdfs:label "Tomate" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

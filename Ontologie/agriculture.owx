@@ -1,0 +1,1067 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="agri" IRI="http://www.example.org/agriculture#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class abbreviatedIRI="agri:Agriculteur"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="agri:Climat"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="agri:Eau"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="agri:Engrais"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="agri:MethodeIrrigation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="agri:Pesticide"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="agri:Sol"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="agri:consommeEau"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:GoutteAGoutte"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:SolArgileux"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Gravite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Aspersion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:SolSableux"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:PesticideChimique"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurMarie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:EngraisPhosphore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:ClimatMediterraneen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:EngraisAzote"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurJean"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Agriculteur"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurJean"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Agriculteur"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurMarie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:MethodeIrrigation"/>
+        <NamedIndividual abbreviatedIRI="agri:Aspersion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Climat"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatMediterraneen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Climat"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Engrais"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisAzote"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Engrais"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisPhosphore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:MethodeIrrigation"/>
+        <NamedIndividual abbreviatedIRI="agri:GoutteAGoutte"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:MethodeIrrigation"/>
+        <NamedIndividual abbreviatedIRI="agri:Gravite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Pesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Pesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideChimique"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Sol"/>
+        <NamedIndividual abbreviatedIRI="agri:SolArgileux"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Sol"/>
+        <NamedIndividual abbreviatedIRI="agri:SolSableux"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="agri:Culture"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatMediterraneen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurJean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisPhosphore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <NamedIndividual abbreviatedIRI="agri:GoutteAGoutte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <NamedIndividual abbreviatedIRI="agri:SolArgileux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurJean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisPhosphore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <NamedIndividual abbreviatedIRI="agri:Aspersion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <NamedIndividual abbreviatedIRI="agri:SolSableux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurMarie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisPhosphore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <NamedIndividual abbreviatedIRI="agri:GoutteAGoutte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <NamedIndividual abbreviatedIRI="agri:SolSableux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurJean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisPhosphore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <NamedIndividual abbreviatedIRI="agri:Gravite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideChimique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <NamedIndividual abbreviatedIRI="agri:SolArgileux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatMediterraneen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurMarie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisAzote"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <NamedIndividual abbreviatedIRI="agri:GoutteAGoutte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <NamedIndividual abbreviatedIRI="agri:SolArgileux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurMarie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisAzote"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <NamedIndividual abbreviatedIRI="agri:GoutteAGoutte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <NamedIndividual abbreviatedIRI="agri:SolArgileux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurMarie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisAzote"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <NamedIndividual abbreviatedIRI="agri:GoutteAGoutte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <NamedIndividual abbreviatedIRI="agri:SolSableux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurJean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisPhosphore"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <NamedIndividual abbreviatedIRI="agri:Gravite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <NamedIndividual abbreviatedIRI="agri:SolSableux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurMarie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisAzote"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <NamedIndividual abbreviatedIRI="agri:Aspersion"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideChimique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <NamedIndividual abbreviatedIRI="agri:SolArgileux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatMediterraneen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurMarie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisAzote"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <NamedIndividual abbreviatedIRI="agri:GoutteAGoutte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <NamedIndividual abbreviatedIRI="agri:SolSableux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurJean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisAzote"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <NamedIndividual abbreviatedIRI="agri:Gravite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideChimique"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <NamedIndividual abbreviatedIRI="agri:SolArgileux"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <NamedIndividual abbreviatedIRI="agri:ClimatTempere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <NamedIndividual abbreviatedIRI="agri:AgriculteurJean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <NamedIndividual abbreviatedIRI="agri:EngraisAzote"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <NamedIndividual abbreviatedIRI="agri:GoutteAGoutte"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <NamedIndividual abbreviatedIRI="agri:PesticideBio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <NamedIndividual abbreviatedIRI="agri:SolArgileux"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-03-25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">160</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">28.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Aubergine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-10-15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">7.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Blé"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-03-20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Carotte"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-08-15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">180</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">18.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Chou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-05-20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">120</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">12.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Courgette"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-09-10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">110</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">14.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Epinard"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-04-05</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">130</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">6.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Fraise"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-07-05</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Haricot"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-05-01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">250</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">15.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Mais"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-06-10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">140</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">26.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Poivron"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-02-10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">35.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:PommeDeTerre"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-04-15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <NamedIndividual abbreviatedIRI="agri:Tomate"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.5</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="agri:consommeEau"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="agri:aClimat"/>
+        <Class abbreviatedIRI="agri:Climat"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="agri:consommeEau"/>
+        <Class abbreviatedIRI="agri:Eau"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="agri:cultivePar"/>
+        <Class abbreviatedIRI="agri:Agriculteur"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="agri:utiliseEngrais"/>
+        <Class abbreviatedIRI="agri:Engrais"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="agri:utiliseMethode"/>
+        <Class abbreviatedIRI="agri:MethodeIrrigation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="agri:utilisePesticide"/>
+        <Class abbreviatedIRI="agri:Pesticide"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="agri:utiliseSol"/>
+        <Class abbreviatedIRI="agri:Sol"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <Class abbreviatedIRI="agri:Culture"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="agri:datePlantation"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="agri:quantiteEau"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="agri:rendement"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="agri:superficie"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:AgriculteurJean</AbbreviatedIRI>
+        <Literal>Jean Dupont</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:AgriculteurMarie</AbbreviatedIRI>
+        <Literal>Marie Lambert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Aspersion</AbbreviatedIRI>
+        <Literal>Irrigation par Aspersion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Aubergine</AbbreviatedIRI>
+        <Literal>Aubergine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Blé</AbbreviatedIRI>
+        <Literal>Blé</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Carotte</AbbreviatedIRI>
+        <Literal>Carotte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Chou</AbbreviatedIRI>
+        <Literal>Chou</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:ClimatMediterraneen</AbbreviatedIRI>
+        <Literal>Climat Méditerranéen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:ClimatTempere</AbbreviatedIRI>
+        <Literal>Climat Tempéré</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Courgette</AbbreviatedIRI>
+        <Literal>Courgette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:EngraisAzote</AbbreviatedIRI>
+        <Literal>Engrais Azoté</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:EngraisPhosphore</AbbreviatedIRI>
+        <Literal>Engrais Phosphaté</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Epinard</AbbreviatedIRI>
+        <Literal>Épinard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Fraise</AbbreviatedIRI>
+        <Literal>Fraise</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:GoutteAGoutte</AbbreviatedIRI>
+        <Literal>Irrigation Goutte-à-goutte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Gravite</AbbreviatedIRI>
+        <Literal>Irrigation par Gravité</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Haricot</AbbreviatedIRI>
+        <Literal>Haricot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Mais</AbbreviatedIRI>
+        <Literal>Maïs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:PesticideBio</AbbreviatedIRI>
+        <Literal>Pesticide Biologique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:PesticideChimique</AbbreviatedIRI>
+        <Literal>Pesticide Chimique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Poivron</AbbreviatedIRI>
+        <Literal>Poivron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:PommeDeTerre</AbbreviatedIRI>
+        <Literal>Pomme de Terre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:SolArgileux</AbbreviatedIRI>
+        <Literal>Sol Argileux</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:SolSableux</AbbreviatedIRI>
+        <Literal>Sol Sableux</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>agri:Tomate</AbbreviatedIRI>
+        <Literal>Tomate</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

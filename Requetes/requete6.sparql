@@ -1,0 +1,9 @@
+PREFIX agri: <http://www.example.org/agriculture#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?farmer (COUNT(?crop) AS ?totalCrops) (AVG(?yield) AS ?avgYield)
+WHERE {
+  ?crop agri:cultivePar ?farmer;
+        agri:rendement ?yield.
+}
+GROUP BY ?farmer

@@ -1,0 +1,11 @@
+PREFIX agri: <http://www.example.org/agriculture#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nomCulture ?methodeIrrigation
+WHERE {
+  ?culture a agri:Culture ;
+           rdfs:label ?nomCulture ;
+           agri:utiliseMethode ?methode .
+  ?methode rdfs:label ?methodeIrrigation .
+}
+ORDER BY ?nomCulture
