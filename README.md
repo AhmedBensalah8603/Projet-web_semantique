@@ -43,9 +43,8 @@ Applications possibles :
 | `Pesticide`           | Produits phytosanitaires                     | Bio, Chimique                     |
 | `Agriculteur`         | Exploitants agricoles                        | Jean Dupont, Marie Lambert        |
 | `MethodeIrrigation`   | Techniques d'arrosage                        | Goutte-à-goutte, Aspersion        |
-| `ZoneGeographique`    | Localisations                                | Vallée de la Loire, Provence      |
-| `Saison`              | Périodes de culture                          | Printemps, Été                    |
-| `Equipement`          | Matériel agricole                            | Tracteur, Serre                   |
+| `Eau`                 | Type D'arrosage                              | Naturel, Intervention Humaine     |
+
 
 ## 🖼️ Visualisation de l’ontologie
 ![Visualisation](./Screenshots/graph.png)
