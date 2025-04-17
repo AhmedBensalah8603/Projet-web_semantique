@@ -40,7 +40,6 @@ Applications possibles :
 | `Sol`                 | Types de sols agricoles                      | Argileux, Sableux, Calcaire       |
 | `Climat`              | Conditions climatiques                       | Tempéré, Tropical, Méditerranéen  |
 | `Engrais`             | Fertilisants                                 | Azote, Phosphore, Potassium       |
-| `Pesticide`           | Produits phytosanitaires                     | Bio, Chimique                     |
 | `Agriculteur`         | Exploitants agricoles                        | Jean Dupont, Marie Lambert        |
 | `MethodeIrrigation`   | Techniques d'arrosage                        | Goutte-à-goutte, Aspersion        |
 | `Eau`                 | Type D'arrosage                              | Naturel, Intervention Humaine     |
